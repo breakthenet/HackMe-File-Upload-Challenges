@@ -6,7 +6,9 @@ All players in my game have a profile pic. Currently, they have to stick in a ur
 
 I've been experimenting with a feature to allow this, but before launching it, was hoping you could help me out by testing to see if it is secure. Could you see if you can do anything malicious with it?
 
-It's available in game, you'll see it in the menu on the left with the title "Preferences Challenge 1".
+It's available in game, you'll see it in the menu on the left with the title "Preferences: Challenge 1".
+
+After uploading an image, you can click "My Profile" in the menu on the left to see it (perhaps right click it if it's a broken image, and click open image in new tab).
 
 -Breakthenet Game Owner
 

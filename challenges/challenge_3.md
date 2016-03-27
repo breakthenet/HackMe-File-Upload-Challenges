@@ -1,14 +1,16 @@
-# sql-injection Challenge 3
+# file-upload Challenge 3
 
 ----------------------
 
-Bad news. I just got a message from the hacker, and he included my admin account's password in an md5 hashed form. That only exists in my database in the user table. Is it possible he used the same exploit as the last excersize to extract this?
+Geez. This is harder than I thought. Ok, based on your advice I dropped the client-side mime type validation and am trying something new.
 
-Can you see if you can duplicate?
+The code should now actually validate that what is being uploaded is a real image, with real dimensions and real mime-types.
 
-I'd also like to know if he can get my plaintext password from the hash. Once you extract it, can you see if you can convert it to plaintext?
+There's no way you should be able to bust past this one.
 
-Thanks!
+It's available in game, you'll see it in the menu on the left with the title "Preferences: Challenge 3".
+
+Thanks again for your help!
 
 -Breakthenet Game Owner
 
@@ -18,17 +20,17 @@ Stuck?
 ----------------------
 <details> 
   <summary>Click for hint 1</summary>
-   Start by gathering info. What does the [user table](https://github.com/breakthenet/sql-injection-exercises/blob/master/dbdata.sql#L1190-L1233) look like in sql?
+  You must upload a valid image on this one (no way to get around that).
 </details>
 
 <details> 
   <summary>Click for hint 2</summary>
-   Still need more info. What is the admin's user ID? Is this exposed anywhere? Look around on the Explore page for something that could give you that info.
+   PHP ignores anything outside of the <? and ?> tags.
 </details>
 
 <details> 
   <summary>Click for hint 3</summary>
-   Once you extract the password hash, "decrypt" it. True, a hash is a one way function and not actually encrypted - but as the site doesn't use salt on it's passwords, it will be trivial to reverse it if it's a common dictionary word. 
+   You can actually insert a comment inside a GIF, which anything processing that GIF ignores. That comment could be anything... it could even have characters like < and ? in it. [GIMP, a free software for manipulating images, will allow you to insert comments in gifs.](http://s116.photobucket.com/user/bayououtdoor/media/gifcomment.gif.html)
 </details>
 
 
