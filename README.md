@@ -17,11 +17,9 @@ Challenges:
 
 [Challenge 3](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_3.md): Mime types & image validation server-side
 
-[Challenge 4](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_4.md): More strict file extension validation, local file inclusion
+[Challenge 4](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_4.md): More strict file extension validation
 
-[Challenge 5](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_5.md): Apache Quirks
-
-[Challenge 6](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_6.md): What's possible when a hole is found
+[Challenge 5](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_5.md): Combo attack with local file inclusion
 
 
 ----------------------
