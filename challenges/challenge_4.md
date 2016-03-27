@@ -18,17 +18,17 @@ Stuck?
 ----------------------
 <details> 
   <summary>Click for hint 1</summary>
-  You must upload a valid image on this one (no way to get around that).
+  His iframe idea was both a bad idea and poorly coded, and merits investigation.
 </details>
 
 <details> 
   <summary>Click for hint 2</summary>
-   PHP ignores anything outside of the <? and ?> tags.
+   Does the include() php function care what the extension of the file is?
 </details>
 
 <details> 
   <summary>Click for hint 3</summary>
-   You can actually insert a comment inside a GIF, which anything processing that GIF ignores. That comment could be anything... it could even have characters like < and ? in it. [GIMP, a free software for manipulating images, will allow you to insert comments in gifs.](http://s116.photobucket.com/user/bayououtdoor/media/gifcomment.gif.html)
+   This challenge is two-part. Part 1 is getting your code to a local file on his server (with an image extension). Part 2 is using the local file inclusion vulnerability to load in your 'image' as though it was code.
 </details>
 
 
