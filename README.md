@@ -2,9 +2,11 @@
 
 A Text-Based MMORPG Game based off Mccode Lite (GPL)
 
-Deploy to your own Heroku instance with this button below, then complete the challenge!
+Deploy to your own Heroku instance with this button below, then complete the challenges!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+For each challenge, you have 'beat' it if you can successfully get php code you wrote to run on the server. A quick and easy test script would look like this: <?php phpinfo(); ?>
 
 Challenges:
 ----------------------
