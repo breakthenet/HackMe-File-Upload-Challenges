@@ -98,6 +98,7 @@ if (!$ir['hospital'])
     print
             "<hr />
 <a href='preferences.php'>Preferences</a><br />
+<a href='preferences_c1.php'>Preferences Challenge 1</a><br />
 <a href='preport.php'>Player Report</a><br />
 <a href='helptutorial.php'>Help Tutorial</a><br />
 <a href='gamerules.php'>Game Rules</a><br />
