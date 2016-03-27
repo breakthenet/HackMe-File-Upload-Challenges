@@ -1,34 +1,33 @@
-# sql-injection Challenge 2
+# file-upload Challenge 2
 
 ----------------------
 
-Friend, you've got to help me out! 
+Ok that was a pretty serious bug you found in Challenge 1. I changed my script so instead of checking for file extension, I now check for mime type of the file. The ball is back in your court - can you get anything past my upload script now?
 
-I was looking at my database earlier today, and found an account with 9999999 crystals (which is one of the currencies in my game). It is impossible for them to get that number legitimately, that many crystals don't even exist in my game!
+It's available in game, you'll see it in the menu on the left with the title "Preferences Challenge 2".
 
-Can you look into it and see if you can find the hole through which this user obtained so many crystals? If you could duplicate the bug, I can fix it. A good place to start would likely be the Crystal Market on the Explore page. Feel free to explore the source code as well if that helps.
-
-Thanks!
+Thanks again for your help!
 
 -Breakthenet Game Owner
 
 ----------------------
 
-
-
 Stuck? 
 ----------------------
 <details> 
   <summary>Click for hint 1</summary>
-   [Here is the code](https://github.com/breakthenet/sql-injection-exercises/blob/master/cmarket.php#L109) associated with buying crystals from the crystal market. Anything stick out to you?
+   When your browser sends the file via the upload form to the server, your browser is automatically including a Content-Type in the request, telling the webserver the file is of type text/php (for example). 
 </details>
 
 <details> 
   <summary>Click for hint 2</summary>
-   Always start with reconnaissance. Did you look for the sql definition of the [Crystal Market table](https://github.com/breakthenet/sql-injection-exercises/blob/master/dbdata.sql#L343-L348)?
+   When your browser sends the file via the upload form to the server, your browser is automatically including a Content-Type in the request, telling the webserver the file is of type text/php (for example). 
 </details>
 
 <details> 
   <summary>Click for hint 3</summary>
-   SQL Injection in PHP has some limitations - you cannot concatenate multiple queries with a semi-colon, for example. However, there are alternatives. Here's [this](http://www.mysqltutorial.org/sql-union-mysql.aspx) and [this](http://dev.mysql.com/doc/refman/5.7/en/union.html) to get you started.
+   Is it possible to have multiple extensions on a file (chained together?)
 </details>
+
+
+

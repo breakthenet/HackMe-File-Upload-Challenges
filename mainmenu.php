@@ -98,11 +98,17 @@ if (!$ir['hospital'])
     print
             "<hr />
 <a href='preferences.php'>Preferences</a><br />
+<b>
 <a href='preferences_c1.php'>Preferences Challenge 1</a><br />
+<a href='preferences_c2.php'>Preferences Challenge 2</a><br />
+<a href='preferences_c3.php'>Preferences Challenge 3</a><br />
+<a href='preferences_c4.php'>Preferences Challenge 4</a><br />
+<a href='preferences_c5.php'>Preferences Challenge 5</a><br />
+</b>
 <a href='preport.php'>Player Report</a><br />
 <a href='helptutorial.php'>Help Tutorial</a><br />
 <a href='gamerules.php'>Game Rules</a><br />
-<a href='viewuser.php?u={$ir['userid']}'>My Profile</a><br />
+<a href='viewuser.php?u={$ir['userid']}'><b>My Profile</b></a><br />
 <a href='logout.php'>Logout</a><br /><br />
 Time is now<br />
             ";
