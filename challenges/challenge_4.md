@@ -1,18 +1,14 @@
-# sql-injection Challenge 4
+# file-upload Challenge 4
 
 ----------------------
 
-Thanks for your help on the last one friend - based on your analysis, I was able to duplicate the bug.
+This is driving me nuts - the arcane knowledge required for your last trick is ridiculous.
 
-Before I had a chance to fix it though, I actually got a message from the hacker. His account had suddenly gone from level 1 to level 100, which should be impossible to attain in under a year.
+I noticed a trend in all your exploits though. You required the file to end with .php to get your code to run. I'm going to go back to my file extension checker and just fix that up - and to be safe, I quarantined it in an iframe (I heard iframes can help contain hackers). You'll have to be more creative if you want to get past my code now! 
 
-In his message, the hacker said he used a bug in the crystal markets to update his user in the database. He told me I had 7 days to find and fix this bug, and then he would announce it publicly. 
+The new code is available in game, you'll see it in the menu on the left with the title "Preferences: Challenge 4".
 
-I hate to do this to you, but can you help me again? You were successful in finding the first bug - but based on what you told me that could only select data from the database and not update it, right? Or is that not the case?
-
-Please look into this - if the hacker could do it, I'm sure you can too. Let's close this hole before his 7 day "grace period" expires.
-
-Thanks!
+Thanks again for your help!
 
 -Breakthenet Game Owner
 
@@ -22,17 +18,17 @@ Stuck?
 ----------------------
 <details> 
   <summary>Click for hint 1</summary>
-   You need to inject into the Select query just like last time using a Union. [Look at the code](https://github.com/breakthenet/sql-injection-exercises/blob/master/cmarket.php#L109-L128) - note that after injecting into the select query, you must get past two error messages, then one of the things you just selected in your injected union gets passed as a parameter to the second query, which is an update to the user table! That's the vector.
+  You must upload a valid image on this one (no way to get around that).
 </details>
 
 <details> 
   <summary>Click for hint 2</summary>
-   Note that [all input](https://github.com/breakthenet/sql-injection-exercises/blob/master/global_func.php#L428-L447) is ran through PHP's magicquote or [addslashes](http://php.net/manual/en/function.addslashes.php) commands. These essentially just add backslashes to escape any quotes in your input. This will prevent you from using quotes in your injection - can you think of a way around that?
+   PHP ignores anything outside of the <? and ?> tags.
 </details>
 
 <details> 
   <summary>Click for hint 3</summary>
-   Javascript has a handy function called [String.fromCharCode](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) that converts numbers into a string. Perhaps MySQL has functions that do something similar?
+   You can actually insert a comment inside a GIF, which anything processing that GIF ignores. That comment could be anything... it could even have characters like < and ? in it. [GIMP, a free software for manipulating images, will allow you to insert comments in gifs.](http://s116.photobucket.com/user/bayououtdoor/media/gifcomment.gif.html)
 </details>
 
 
