@@ -1,14 +1,12 @@
-# sql-injection Challenge 5
+# file-upload Challenge 5
 
 ----------------------
 
-I heard rumors of a new attack vector that has been found on the game engine I'm using. While I don't think it's been used against me yet, now that rumors are circling it's only a matter of time.
+...
 
-It is a sql injection, but this time the input is weird. I'm told that this time it's something to do with how we're recording the user's IP address.
+Ok, I will cease listening to users - can't trust them. I dropped support for the "1337" extension - and to be safe, I quarantined the preferences in an iframe (I heard iframes can help contain hackers). You'll have to be more creative if you want to get past my code now! 
 
-Can you check it out and see if you can figure out how to perform the attack so we can patch our game?
-
-Thanks!
+The new code is available in game, you'll see it in the menu on the left with the title "Preferences: Challenge 5".
 
 -Breakthenet Game Owner
 
@@ -18,25 +16,17 @@ Stuck?
 ----------------------
 <details> 
   <summary>Click for hint 1</summary>
-   You may have noticed in the SQL definition of the user table, there is a field called [lastip](https://github.com/breakthenet/sql-injection-exercises/blob/master/dbdata.sql#L1199). You probably want to check where we're updating that in code.
+  His iframe idea was both a bad idea and poorly coded, and merits investigation.
 </details>
 
 <details> 
   <summary>Click for hint 2</summary>
-  In header.php where [we update lastip](https://github.com/breakthenet/sql-injection-exercises/blob/master/header.php#L30-L33) everytime a user performs an action, you see this code:
-   $ip = ($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
-   
-   In English, this is saying "If HTTP_X_FORWARDED_FOR is set, use that. If it's not set, use REMOTE_ADDR". Can a user manipulate either of these variables?
+   Does the include() php function care what the extension of the file is?
 </details>
 
 <details> 
   <summary>Click for hint 3</summary>
-   When a user submits a web request, headers are set with that request. A user can easily modify those headers either by handcrafting code, or just by installing an add-on for their browser, such as [Modify Headers for Google Chrome](https://chrome.google.com/webstore/detail/modify-headers-for-google/innpjfdalfhpcoinfnehdnbkglpmogdi?hl=en-US).
-</details>
-
-<details> 
-  <summary>Click for hint 4</summary>
-   The request header you need to modify is X-Forwarded-For. This shows up as the variable $_SERVER['HTTP_X_FORWARDED_FOR'] in php.
+   This challenge is two-part. Part 1 is getting your code to a local file on his server (with an image extension). Part 2 is using the local file inclusion vulnerability to load in your 'image' as though it was code.
 </details>
 
 

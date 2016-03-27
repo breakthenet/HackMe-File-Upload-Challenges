@@ -8,7 +8,7 @@ if($_FILES['uploadedfile']['name']) {
     if ($extension != "jpg" && $extension != "jpeg" && $extension != "gif" && $extension != "png")
     {
         echo 'Invalid File Extension: '.$extension.'.<br />
-        &gt; <a href="preferences_c4_changepic.php?action=picchange">Go Back</a>';
+        &gt; <a href="preferences_c5_changepic.php?action=picchange">Go Back</a>';
         die();
     }
     
@@ -20,7 +20,7 @@ if($_FILES['uploadedfile']['name']) {
     else
     {
         echo 'Valid file upload, but server-side error while attempting to save file.<br />
-        &gt; <a href="preferences_c4_changepic.php?action=picchange">Go Back</a>';
+        &gt; <a href="preferences_c5_changepic.php?action=picchange">Go Back</a>';
         die();
     }
     
@@ -35,7 +35,7 @@ if($_FILES['uploadedfile']['name']) {
 else {
     print 
             '<h3>Pic Change</h3>
-<form enctype="multipart/form-data" action="page_loader.php?page=preferences_c4_changepic.php" method="POST">
+<form enctype="multipart/form-data" action="page_loader.php?page=preferences_c5_changepic.php" method="POST">
 New Pic: <input name="uploadedfile" type="file" /><br />
 <input type="submit" value="Upload Pic" />
 </form>';
