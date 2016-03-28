@@ -21,6 +21,8 @@ Challenges:
 
 [Challenge 5](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_5.md): Combo attack with local file inclusion
 
+[Challenge 6](https://github.com/breakthenet/file-upload-exercises/blob/master/challenges/challenge_6.md): Seeing what's possible with file upload (such as php web shells).
+
 
 ----------------------
 
